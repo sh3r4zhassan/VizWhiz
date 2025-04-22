@@ -213,8 +213,12 @@ if uploaded_file:
                             sns.scatterplot(x=x_vals, y=y_vals, ax=ax, label=y_display,
                                             s=size, alpha=alpha, color=variable_colors[y_display])
                             if show_reg:
-                                sns.regplot(x=x_vals, y=y_vals, scatter=False, ax=ax,
-                                            label=f"{y_display} (reg)", color=variable_colors[y_display], linestyle="--")
+                                reg_line = sns.regplot(x=x_vals, y=y_vals, scatter=False, ax=ax,
+                                                    label=f"{y_display} (reg)", color=variable_colors[y_display])
+                                # Manually update the line style
+                                for line in reg_line.lines[-1:]:
+                                    line.set_linestyle('--')
+
 
                     ax.set_title(f"Scatter Plot: {', '.join(y_displays)} vs {x_display}", loc="left", weight="bold")
                     sns.despine(ax=ax)
