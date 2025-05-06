@@ -5,18 +5,20 @@
 ## Features
 
 - Upload any CSV file
-- Clean data with options to:
-   Drop or fill missing values
-   Remove outliers using adjustable IQR thresholds
-   Deduplicate rows based on selected columns
-- Visualizations include:
-   Histograms (with optional KDE curves)
-   Box plots
-   Violin plots
-   Scatter plots (with regression lines)
-   Line plots
-- Full control over color selection and grouping by categorical variables
-- Supports log scaling, point opacity, and detailed layout customization
+- Data Cleaning:
+  - Drop or fill missing values (mean, median, or mode)
+  - Remove outliers (customizable IQR threshold)
+  - Deduplicate rows
+- Visualizations:
+  - Histograms (with optional KDE)
+  - Box plots
+  - Violin plots
+  - Scatter plots (with regression lines)
+  - Line plots
+- Customization Options:
+  - Color selection for each group
+  - Grouping by categorical variables
+  - Log scaling, point opacity, and layout adjustments
 
 ## Installation
 
